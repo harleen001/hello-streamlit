@@ -1,6 +1,12 @@
 import streamlit as st
+import pandas as pd
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+students={
+    "Name":["Kiran","Rohit","Mohit","Pawan","Suri"],
+    "Rollno":[1,2,3,4,5],
+    "Age":[21,23,22,19,21]
+}
+
+df=pd.DataFrame(students)
+
+st.dataframe(df)
